@@ -25,11 +25,13 @@ Ambas direcciones a los servicios accounts aparecen en Eureka, vemos que indica 
 ![Alt text](image-10.png)
 
 **What happens when you kill the service accounts (2222) and do requests to web?. Explain and screenshots, including at least one Eureka dashboard screenshot**
+
 Tras detener el servicio accounts 3335 Eureka se ha actualizado cambiando el accounts-service del 3335 al 3333 mostrando únicamente el servicio accounts que sigue activo (3333).
 
 ![Alt text](image-11.png)
 
 **Can the web service provide information about the accounts again?. Why? Explain and screenshots, including at least one Eureka dashboard screenshot**
+
 Actualmente Eureka es capaz de proporcionar información sobre las cuentas debido a que ha permitido el cambio de lanzar el servicio accounts en el puerto 3335 al puerto 3333. En caso de que cambiemos de nuevo el puerto al 3335 pasaría lo mismo, cuando ambos servicios accounts estén en funcionamiento aparecerán en Eureka y cuando se mate al 3333, en Eureka aparecerá únicamente el 3335, indicando que el cambio se ha realizado correctamente sin perder el acceso a la información.
 
 _Cambio a 3335 de nuevo:_
