@@ -33,6 +33,7 @@ Tras detener el servicio accounts 3335 Eureka se ha actualizado cambiando el acc
 **Can the web service provide information about the accounts again?. Why? Explain and screenshots, including at least one Eureka dashboard screenshot**
 
 Actualmente Eureka es capaz de proporcionar información sobre las cuentas debido a que ha permitido el cambio de lanzar el servicio accounts en el puerto 3335 al puerto 3333. En caso de que cambiemos de nuevo el puerto al 3335 pasaría lo mismo, cuando ambos servicios accounts estén en funcionamiento aparecerán en Eureka y cuando se mate al 3333, en Eureka aparecerá únicamente el 3335, indicando que el cambio se ha realizado correctamente sin perder el acceso a la información.
+Cuando ambos puertos están en funcionamiento la carga de trabajo se distribuye entre los dos mientras que cuando uno de ellos se cierra, Eureka lo detecta y tras un tiempo de procesamiento actualiza la redirección al puerto que está actualmente ativo.
 
 _Cambio a 3335 de nuevo:_
 ![Alt text](image-12.png)
